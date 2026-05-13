@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>HTML Visitor Counter</title>
+
+    <style>
+
+        body{
+            margin:0;
+            font-family:Arial;
+            background:linear-gradient(135deg,#4facfe,#00f2fe);
+            color:white;
+            text-align:center;
+        }
+
+        header{
+            padding:40px;
+        }
+
+        h1{
+            font-size:3rem;
+        }
+
+        .box{
+            background:white;
+            color:black;
+            width:400px;
+            margin:auto;
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        button{
+            padding:15px 25px;
+            font-size:18px;
+            border:none;
+            border-radius:10px;
+            background:#6a11cb;
+            color:white;
+            cursor:pointer;
+            margin-top:20px;
+        }
+
+        button:hover{
+            background:#2575fc;
+        }
+
+        .count{
+            font-size:4rem;
+            color:#ff006e;
+        }
+
+        a{
+            text-decoration:none;
+            color:white;
+            font-weight:bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>📊 Website Click Counter</h1>
+
+    <p>Track User Button Clicks Using HTML + JavaScript</p>
+
+</header>
+
+<div class="box">
+
+    <h2>Total Button Clicks</h2>
+
+    <div class="count" id="count">
+        0
+    </div>
+
+    <button onclick="increaseCount()">
+        Click Here
+    </button>
+
+    <br><br>
+
+    <button onclick="resetCount()">
+        Reset Counter
+    </button>
+
+    <br><br>
+
+    <a href="index.html">
+        ⬅ Back to Home Page
+    </a>
+
+</div>
+
+<script>
+
+    // Get stored count
+    let clicks = localStorage.getItem("clickCount") || 0;
+
+    // Display count
+    document.getElementById("count").innerText = clicks;
+
+    // Increase count
+    function increaseCount(){
+
+        clicks++;
+
+        localStorage.setItem("clickCount", clicks);
+
+        document.getElementById("count").innerText = clicks;
+    }
+
+    // Reset count
+    function resetCount(){
+
+        clicks = 0;
+
+        localStorage.setItem("clickCount", clicks);
+
+        document.getElementById("count").innerText = clicks;
+    }
+
+</script>
+
+</body>
+
+</html>
