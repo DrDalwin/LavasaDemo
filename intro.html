@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Introduction to HTML</title>
+
+    <style>
+
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            background:linear-gradient(135deg,#1d2671,#c33764);
+            color:white;
+        }
+
+        header{
+            text-align:center;
+            padding:40px;
+            background:rgba(255,255,255,0.1);
+        }
+
+        header h1{
+            font-size:3rem;
+            color:#ffd700;
+        }
+
+        nav{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            padding:20px;
+            flex-wrap:wrap;
+        }
+
+        nav a{
+            text-decoration:none;
+            background:#ff4d6d;
+            color:white;
+            padding:12px 20px;
+            border-radius:30px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            background:#ffd700;
+            color:black;
+        }
+
+        .container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:25px;
+            padding:40px;
+        }
+
+        .card{
+            background:rgba(255,255,255,0.12);
+            padding:25px;
+            border-radius:20px;
+            box-shadow:0 8px 20px rgba(0,0,0,0.3);
+            transition:0.4s;
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+        }
+
+        .card h2{
+            color:#ffd166;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:20px;
+            padding:12px 20px;
+            background:#06d6a0;
+            color:black;
+            border-radius:25px;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        .btn:hover{
+            background:#ffd700;
+        }
+
+        footer{
+            text-align:center;
+            padding:25px;
+            background:rgba(0,0,0,0.3);
+            margin-top:30px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>🌐 Introduction to HTML</h1>
+
+    <p>Learn HTML Basics with Interactive Pages</p>
+
+</header>
+
+<nav>
+
+    <a href="#intro">Introduction</a>
+    <a href="#tags">HTML Tags</a>
+    <a href="#forms">Forms</a>
+    <a href="count.html">Click Counter</a>
+
+</nav>
+
+<section class="container">
+
+    <div class="card" id="intro">
+
+        <h2>📘 What is HTML?</h2>
+
+        <p>
+            HTML stands for HyperText Markup Language.
+            It is used to create webpages and web applications.
+        </p>
+
+        <a href="count.html" class="btn">
+            Visit Counter Page
+        </a>
+
+    </div>
+
+    <div class="card" id="tags">
+
+        <h2>🏷 Important HTML Tags</h2>
+
+        <p>
+            • &lt;html&gt; <br>
+            • &lt;head&gt; <br>
+            • &lt;body&gt; <br>
+            • &lt;h1&gt; to &lt;h6&gt; <br>
+            • &lt;p&gt; <br>
+            • &lt;img&gt; <br>
+            • &lt;a&gt;
+        </p>
+
+    </div>
+
+    <div class="card" id="forms">
+
+        <h2>📝 HTML Forms</h2>
+
+        <p>
+            Forms are used to collect user input such as:
+            name, email, password, feedback, and registration data.
+        </p>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <h3>🚀 HTML Learning Portal</h3>
+
+    <p>Designed for Beginners & Students</p>
+
+</footer>
+
+</body>
+
+</html>
